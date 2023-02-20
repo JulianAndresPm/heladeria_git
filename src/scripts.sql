@@ -1,4 +1,5 @@
-SELECT * FROM db_ice.usuarios WHERE usuario = 'admin' and password ='admin123*';
+SELECT * FROM db_ice.usuarios 
+WHERE usuario = 'admin' and password ='admin123*';
 
 -- TABLA USUARIOS
 
@@ -50,10 +51,14 @@ CREATE TABLE productos(
 ALTER TABLE productos ADD PRIMARY KEY (id);
 ALTER TABLE productos MODIFY id INT(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 INSERT INTO db_ice.productos(NombreProducto,disponibilidad,stock) 
-	VALUES('Paleta Aloja',1,300);
+	VALUES('Cokies & Cream',1,300);
+ALTER TABLE productos ADD COLUMN precioxUni INT(10);
+
 
 select * from productos;
 
+
+CREATE TABLE 
 
 
 
