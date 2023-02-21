@@ -1,15 +1,18 @@
 {{!-- <h1> Productos</h1> --}}
 <!--1ra seccion Helados Artesanales -->
-<h2 class="sub_titulos">Artesanales</h2>
+<h2 class="sub_titulos">Productos Creme helado</h2>
 <ul class="productos">
     {{#each helados}}
+
+
         <li>
             <h2>{{NombreProducto}}</h2>
-            <img src="/img/artesanal-postre-pina-colada.jpg" alt="postre piña colada">
+            <img src={{imgUrl}} alt="postre piña colada">
             <div class="descripcion_general">
-                <p class="descripcion">Un producto innovador
-                    e indulgente, con el fin de resaltar los sabores auntenticamente nuestros.</P>
-                <p class="precio">$15.000 </p>
+                <p class="descripcion">
+                    {{descripcion}}
+                </P>
+                <p class="precio">${{precioxUni}}</p>
             </div>
             <a href="/twist/carrito/{{id}}">
                 {{!-- <input type="button" value="Agregar al Carrito"> --}}
@@ -17,73 +20,8 @@
             </a>
         </li>
 
+
+
     {{/each}}
-
-
-    {{!-- <li>
-        <h2>Dulce de Mora</h2>
-        <img src="/img/cremhelado-artesanal-dulce-de-moras.jpg" alt="dulce de mora">
-        <div class="descripcion_general">
-            <p class="descripcion">Helado cremoso con grasa vegetal, sabor vainilla con mora
-                y relleno de leche condensada.</P>
-            <p class="precio">$15.000 </p>
-        </div>
-        <input type="button" value="Agregar al Carrito">
-    </li>
-    <li>
-        <h2>Tres leches</h2>
-        <img src="/img/ARTESANAL-TRES-LECHES.jpg" alt="tres leches">
-        <div class="descripcion_general">
-            <p class="descripcion">Helado con grasa vegetal, sabor tres leches,
-                con relleno de leche condensada y trozos de galleta.</p>
-            <p class="precio">$15.000 </p>
-        </div>
-        <input type="button" value="Agregar al Carrito">
-    </li>
-    <li>
-        <h2>Maracuya</h2>
-        <img src="/img/cremhelado-artesanal-maracuya.jpg" alt="Maracuya">
-        <div class="descripcion_general">
-            <p class="descripcion">Helado de leche con grasa vegetal, sabor a
-                Maracuyá con relleno de galleta.</P>
-            <p class="precio">$15.000 </p>
-        </div>
-        <input type="button" value="Agregar al Carrito">
-    </li> --}}
-
 </ul>
-<!-- 2da Parte Paletas-->
-{{!-- <h2 class="sub_titulos">Paletas</h2>
-<ul class="productos">
-    <li>
-        <h2>Fresa</h2>
-        <img src="/img/paleta_fresa.jpg" alt="paleta fresa">
-        <div class="descripcion_general">
-            <p class="descripcion">Helado cremoso con grasa vegetal sabor a fresa,
-                con cobertura sabor a chocolate</P>
-            <p class="precio">$15.000 </p>
-        </div>
-        <input type="button" value="Agregar al Carrito">
-    </li>
-    <li>
-        <h2>Mix Frutos Rojos</h2>
-        <img src="/img/frutos_rojos.jpg" alt="mix frutos rojos">
-        <div class="descripcion_general">
-            <p class="descripcion">Helado cremoso con grasa vegetal sabor a vainilla, con cobertura sabor a
-                frutos rojos</P>
-            <p class="precio">$15.000 </p>
-        </div>
-        <input type="button" value="Agregar al Carrito">
-    </li>
-    <li>
-        <h2>Cokies & Cream</h2>
-        <img src="/img/paleta_cookie_cream.jpg" alt="cokies and cream">
-        <div class="descripcion_general">
-            <p class="descripcion">Helado cremoso con grasa vegetal sabor a vainilla, con cobertura sabor a
-                chocolate y galleta
-            </P>
-            <p class="precio">$15.000 </p>
-        </div>
-        <input type="button" value="Agregar al Carrito">
-    </li>
-</ul> --}}
+

@@ -34,25 +34,23 @@ router.post('/logup', passport.authenticate('local.logup', {
     failureFlash: true
 }));
 
-router.post('/login', (req, res) => {
-    console.log(req.body);
-    passport.authenticate('local.login', {
-        successRedirect: '/twist/perfil',
-        failureRedirect: '/twist/login',
-        failureFlash: true
-    })
+router.post('/login',passport.authenticate('local.login', {
+    successRedirect: '/twist/perfil',
+    failureRedirect: '/twist/login',
+    failureFlash: true
+}));
     // (req, res, next)= {
 
     // };
-});
+
 
 
 // router.post('/logup', async (req ,res) => {
-//     passport.authenticated('local.logup',{
-//         successRedirect: '/twist/perfil',
-//         failureRedirect: '/twist/login',
-//         failureFlash: true
-//     });
+//     // passport.authenticated('local.logup',{
+//     //     successRedirect: '/twist/perfil',
+//     //     failureRedirect: '/twist/login',
+//     //     failureFlash: true
+//     // });
 
 
 //     console.log(req.body);
@@ -72,6 +70,13 @@ router.post('/login', (req, res) => {
 //     // res.send("Registrado");
 
 // });
+
+router.get('/logout',(req, res, next) => {
+    req.logout( (err) => {
+        if (err) { return next(err); }
+        res.redirect('/twist/login')
+      });
+});
 
 router.get('/perfil', (req, res) => {
     res.render('heladeriaViews/perfil')

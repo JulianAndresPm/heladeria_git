@@ -4,22 +4,24 @@ const helpers = require('./helpers');
 const localStrategy = require('passport-local').Strategy;
 
 passport.use('local.login', new localStrategy({
+    
     usernameField: 'usuario',
     passwordField: 'password',
     passReqToCallback: true
 }, async (req, usuario, password, done) => {
+    console.log("usuario"+usuario);
     console.log(req.body);
     const response = await pool.query('SELECT * FROM usuarios WHERE usuario = ?',[usuario]);
-    if(response.lenght > 0){
+    if(response.length > 0){
         const usuario = response[0];
         const valorPasword = await helpers.compararContrasena(password, usuario.password);
         if(valorPasword){
-            done(null, usuario, req.flash('loginCorrecto','¡Bienvenido '+ usuario['usuario']+' !'))
+            done(null, usuario, req.flash('loginCorrecto','¡Bienvenido '));
         }else{
             done(null,false, req.flash('loginError','Constraseña o Usuario incorrecto'));
         };
     }else{
-        return done(null,false,req.flash('loginError','El nombre de usuario no existe'))
+        return done(null,false, req.flash('loginError','El nombre de usuario no existe'))
     };
 }));
 
@@ -30,6 +32,7 @@ passport.use('local.logup', new localStrategy({
     passReqToCallback: true
 }, async (req, usuario, password, done) => {
     console.log(req.body);
+
     const { nombres,apellidos,fechaNac,telefono,correo } = req.body;
     const nuevoUsuario = {
         usuario,
