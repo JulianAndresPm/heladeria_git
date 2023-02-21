@@ -62,6 +62,10 @@ nav a:hover {
 .caja img{
     width: 30px;
     margin-left: 15px;
+    width: 30px;
+    margin-left: -20px;
+    margin-right: 10px;
+    margin-top: -5px;
 }
 
 .caja button{
@@ -90,6 +94,65 @@ nav a:hover {
     background-repeat: no-repeat;
     background-size: cover;
 }
+/*----------Off canva--------------*/
+
+.offcanvas-header{
+    background:  linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+    color: white;
+}
+
+.carrito{
+    display: grid;  
+    grid-template-columns: 1fr 1fr;
+}
+.offcanvas-title{
+    margin-top: 60px;
+    margin-left: 45px;
+    font-size: 25px;
+}
+
+    
+.carrito img{
+    width: 100%;
+}
+
+.producto p{
+    text-align: justify;
+}
+
+.producto select{
+    padding: 15px;
+}
+
+.producto .precio{
+    font-size: 17px;
+    color: goldenrod;
+}
+
+.offcanvas-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.btn-offcanva{
+    text-align: center;
+    margin: 25px 40px;
+    padding: 12px 0px;
+    background: black;
+    color: white;
+    font-size: 15px;
+}
+
+.btn-offcanva:hover{
+    background:#add672;
+    color:white;
+}
+
+
+
+
+
 
 
 /*----------------------Seccion Baja (footer)---------------------------------*/
@@ -101,14 +164,18 @@ footer{
     margin-top: 30px;
 }
 
+footer label{
+    margin-top: 230px;
+}
+
 .wave_footer{
     width: 100%;
-    height: 155px;
-    *background-image: url(/img/wave_footer.png);
+    height: 22%;
+    background-image: url(/img/wave_footer.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    bottom: -900px;
+
 }
 
 
@@ -117,7 +184,7 @@ footer{
     display: flex;
     justify-content: end;
     margin-left: -60px;
-    margin-top: 170px;
+    margin-top: -30px;
 }
 
 .footer-redes img{
