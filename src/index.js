@@ -43,7 +43,7 @@ app.use(passport.session());
 app.use((req,res,next) => {
     app.locals.loginCorrecto = req.flash('loginCorrecto');
     app.locals.loginError = req.flash('loginError');
-    app.locals.registroCorrecto = req.flash('registroCorrecto');
+    // app.locals.registroCorrecto = req.flash('registroCorrecto');
     app.locals.usuario = req.user;
 
     next();

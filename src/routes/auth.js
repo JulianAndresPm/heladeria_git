@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const passport = require('passport');
+const { isloLoggeedIn } = require('../lib/auth');
+
 
 router.get('/login', (req, res) => {
     res.render('heladeriaViews/login');
@@ -71,14 +73,14 @@ router.post('/login',passport.authenticate('local.login', {
 
 // });
 
-router.get('/logout',(req, res, next) => {
+router.get('/logout',isloLoggeedIn,(req, res, next) => {
     req.logout( (err) => {
         if (err) { return next(err); }
         res.redirect('/twist/login')
-      });
+    });
 });
 
-router.get('/perfil', (req, res) => {
+router.get('/perfil', isloLoggeedIn , (req, res) => {
     res.render('heladeriaViews/perfil')
     console.log("Estas en el perfil");
 });

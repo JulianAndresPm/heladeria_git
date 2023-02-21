@@ -8,6 +8,11 @@ var formulario_registro = document.querySelector(".formulario_registro");
 var caja_t_login = document.querySelector(".caja_t_login");
 var caja_t_registro = document.querySelector(".caja_t_registro");
 
+// document.getElementById('carrito').click(function (event) {
+//     console.log("Click");
+// });
+
+
 // Funciones
 
 function iniciarSesion(){

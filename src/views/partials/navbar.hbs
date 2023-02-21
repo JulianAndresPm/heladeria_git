@@ -7,6 +7,10 @@
                 {{#if usuario}}
                 <li><a href="/twist/productos">Nuestros Productos </a></li>
                 <li><a href="/twist/logout">Cerrar Sesion</a></li>
+                {{else}}
+                <li><a href="/twist/login">Iniciar Sesion</a></li>
+                {{/if}}
+                {{#if usuario}}
                 <li>
                     <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                         aria-controls="offcanvasRight">
@@ -15,7 +19,6 @@
                     </button>
                 </li>
                 {{/if}}
-                <li><a href="/twist/login">Iniciar Sesion</a></li>
            
               
               
