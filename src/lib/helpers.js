@@ -12,6 +12,7 @@ helpers.compararContrasena = async (password, passwordDB) => {
         return await bcrypt.compare(password,passwordDB);
     } catch (error) {
         console.log("ERROR"+error);
+        
     }
 }
 

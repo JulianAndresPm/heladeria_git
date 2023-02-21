@@ -1,0 +1,35 @@
+.home{
+    width: 940px;
+    margin: auto;
+}
+
+.home h1{
+    text-align: center;
+    background: linear-gradient(135deg,rgb(202,248,128) 30%,rgb(113,206,126) 100%);
+    margin: 30px 30px;
+    padding: 15px;
+    border-radius: 100px 0px 100px 0px;
+}
+
+.home h2{
+    margin-top: 55px;
+}
+
+.home img{
+    width: 490px;
+    border-radius: 50px;
+}
+
+.home .descripcion_1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.home .descripcion_1 p{
+    margin-right: 40px;
+}
+
+.home .descripcion_2 p{
+    text-align: center;
+}
+

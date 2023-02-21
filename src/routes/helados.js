@@ -19,6 +19,8 @@ router.get('/productos', async (req, res) => {
 router.get('/carrito/:id',async (req,res) => {
     const idProducto = req.params.id;
     console.log("se añade el producto con id " + idProducto);
+    const response = pool.query('SELECT * FROM productos WHERE id ?',[idProducto]);
+    
     res.redirect('/twist/productos');
 });
 
