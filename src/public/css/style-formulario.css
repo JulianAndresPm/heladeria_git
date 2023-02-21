@@ -1,0 +1,63 @@
+/* Parte media */
+
+main{
+    width: 940px;
+    margin: 0 auto;
+    
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form fieldset{
+    display: block;
+    font-size: 20px;
+    margin:0 0 10x;
+
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width:40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: brown;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.enviar:hover{
+    background-color: gold;
+    font-size: 22px;
+    transform: scale(1.0);
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}

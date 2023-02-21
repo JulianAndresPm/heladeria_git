@@ -1,0 +1,58 @@
+main{
+    width: auto;
+    height: 100%;
+}
+
+.productos{
+    display: flex;
+    margin: auto;
+    *width: 940px;
+}
+
+.productos li{
+    text-align: center;
+    margin: 0 1.5%;
+    *border: 2px solid black;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.productos li img{
+    width: 250px;
+}
+
+.productos h2{
+    padding: 10px;
+    margin: 10px -10px;
+    background: aliceblue;
+    color: #5fd1b8;
+    font-size: 18px;
+}
+
+.productos input{
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.descripcion_general{
+    background-color: aliceblue;
+    color: darkgoldenrod;
+    margin: 1px -20px;
+}
+
+.sub_titulos{
+    font-size: 25px;
+    text-align: center;
+    margin: 30px 70px;
+    padding: 20px;
+    background:  linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+    color: white;
+    border-radius: 70px 0 70px 0;
+}
+
+/* Efecto hover*/
+
+.productos li:hover{
+    background-color: aliceblue;
+}
