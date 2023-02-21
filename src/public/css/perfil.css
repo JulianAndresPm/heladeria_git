@@ -1,0 +1,38 @@
+.mian-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mian-perfil h2{
+    text-align: center;
+    margin-top: -85px;
+    margin-bottom: 58px;
+}
+
+.mian-perfil .input_form{
+    padding: 10px;
+    border: 1px solid #CEF09D;
+}
+
+.mian-perfil .btn_form{
+    position: absolute;
+    right: 675px;
+    font-size: 22px;
+    font: bold;
+    top: 540px;
+    font-family: bold;
+    background: #CEF09D;
+    padding: 4px 26px;
+    border-radius: 10px;
+}
+
+.mian-perfil .btn_form:hover{
+    background: #5fd1b8;
+}
+
+.perfil{
+    font-size: 30px;
+}
+
+
