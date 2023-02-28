@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const passport = require('passport');
-const { isloLoggeedIn } = require('../lib/auth');
+const { isloLoggeedIn, isNotLoggedIn } = require('../lib/auth');
 
 
-router.get('/login', (req, res) => {
+router.get('/login', isNotLoggedIn,(req, res) => {
     res.render('heladeriaViews/login');
 });
 

@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 30px;
+    justify-content: center;
+}
+
+.mian-perfil h1{
+    padding-bottom: 10px;
 }
 
 .mian-perfil h2{
@@ -11,17 +17,16 @@
 }
 
 .mian-perfil .input_form{
-    padding: 10px;
+    padding: 9px;
     border: 1px solid #CEF09D;
 }
 
 .mian-perfil .btn_form{
     position: absolute;
-    right: 675px;
+    right: 583px;
     font-size: 22px;
     font: bold;
     top: 540px;
-    font-family: bold;
     background: #CEF09D;
     padding: 4px 26px;
     border-radius: 10px;

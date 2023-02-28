@@ -1,8 +1,10 @@
 {{!-- <h1> Productos</h1> --}}
 <!--1ra seccion Helados Artesanales -->
-<h2 class="sub_titulos">Productos Creme helado</h2>
-<ul class="productos">
-    {{#each helados}}
+<form >
+
+    <h2 class="sub_titulos">Productos Cream helado</h2>
+    <ul class="productos">
+        {{#each helados}}
 
 
         <li>
@@ -14,14 +16,17 @@
                 </P>
                 <p class="precio">${{precioxUni}}</p>
             </div>
-            <a href="/twist/carrito/{{id}}">
-                {{!-- <input type="button" value="Agregar al Carrito"> --}}
-                <button type="button" class="btn btn btn-primary" id="carrito">Agregar al carrito</button>
-            </a>
+            {{!-- <a href="/twist/carrito/{{id}}"> --}}
+
+                <button type="button" class="btn btn btn-primary" id="addCarrito" onclick="addcar({{id}})">Agregar al carrito</button>
+            {{!-- </a> --}}
         </li>
 
 
 
-    {{/each}}
-</ul>
+        {{/each}}
+    </ul>
 
+</form>
+
+<script src="/js/productos.js"></script>

@@ -114,6 +114,7 @@ main{
     padding: 80px 30px;
     display: block;
     margin-top: -135px;
+    border: 2px solid black;
 }
 
 .formulario_registro{

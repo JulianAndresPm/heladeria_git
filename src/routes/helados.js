@@ -18,9 +18,12 @@ router.get('/productos',isloLoggeedIn , async (req, res) => {
 
 
 router.get('/carrito/:id',isloLoggeedIn,async (req,res) => {
-    const idProducto = req.params.id;
+    let idProducto = new Array();
+    idProducto.push(req.params.id);
+    console.log("req"+req);
     console.log("se añade el producto con id " + idProducto);
-    const response = await pool.query('SELECT * FROM productos WHERE id = ?',[idProducto]);
+
+    // const response = await pool.query('SELECT * FROM productos WHERE id = ?',[idProducto]);
     // console.log("espuesta "+response[0]['id']);
 
     // res.redirect('/twist/productos');
