@@ -1,14 +1,16 @@
 // document.getElementById("addCarrito").addEventListener("click",iniciarSesion);
-let productos = new Array();
+// let productos = new Array();
 
-function addcar(id){
-    productos.push(id);
-    console.log("Se añade el producto "+id);
+function addcar(id , precioxUni){
+    let id_producto = id;
     $.ajax({
-        url:'/twist/carrito/'+id,
-        success: function(){
-            
+        type:'POST',
+        url:'/twist/carrito/',
+        data:{
+            id_producto,
+            precioxUni
         },
-        data:productos
-    })
-}
+        dataType:'json'
+    });
+
+};
