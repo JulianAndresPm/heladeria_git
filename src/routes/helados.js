@@ -3,38 +3,43 @@ const pool = require('../database');
 const router = express.Router();
 const { isloLoggeedIn } = require('../lib/auth');
 
+
 router.get('/', (req, res) => {
     res.render('heladeriaViews/menu');
+    // res.send("Menu");
+});
+
+router.get('/prueba', (req, res) => {
+    res.render('heladeriaViews/prueba');
     // res.send("Menu");
 });
 
 
 router.get('/productos',isloLoggeedIn , async (req, res) => {
     const helados = await pool.query('SELECT * FROM productos');
-    // console.log(helados);
+    console.log({helados});
+
     res.render('heladeriaViews/productos',{ helados });
     // res.send("Helados")
 });
 
 router.get('/carrito/:id',isloLoggeedIn, async (req,res) => {
-    let productosCarrito = [];
-    const id_usuario = req.params.id
+    const id_productos = new Array();
+    const id_usuario = req.params.id;
     const response = await pool.query('SELECT * FROM carrito WHERE id_usuario = ?',[id_usuario]);
 
     if(response[0]){
-        response.forEach( async (x) => {
-            const { id_producto } = x;
-            let producto = await pool.query('SELECT * FROM productos WHERE id = ?',[id_producto]);
-            productosCarrito.push({
-                id:producto.id,
-                nombre: producto.NombreProducto,
-                precio:producto.precioxUni
-            });
-            // console.log(productosCarrito);
-
-            
+        response.forEach( (x) => {
+            if(id_productos.indexOf(x['id_producto']) === -1){
+                id_productos.push(x['id_producto']);
+            }  
         });
-        console.log("producto "+ productosCarrito);
+        const productos = await pool.query('SELECT * FROM productos WHERE id in ('+[id_productos]+')');
+        // res.send(producto);
+        console.log({productos});
+
+        res.render('heladeriaViews/prueba', {productos} );
+
     }
     else{
         

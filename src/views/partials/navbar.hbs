@@ -35,11 +35,13 @@
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        {{#each producto}}
+        <div class="carro">
+            <div class="offcanvas-body">
             <div class="carrito">
-                <img src="/img-productos/ARTESANAL-TRES-LECHES.jpg" alt="producto">
+                <img src={{imgUrl}} alt="producto">
                 <div class="producto">
-                    <p>Helado artesanal con centro de leche condensada.</p>
+                    <p>{{descripcion}}</p>
                 <select>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -47,17 +49,18 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>       
-                <p class="precio">Precios: $ 2350</p>
+                <p class="precio">Precios: $ {{precioxUni}}</p>
                 </div>
             </div>
+            </div>
+            <div class="offcanvas-footer">
+                    <p>Subtotal:</p><p>$2350</p>
+                    <p>Total:</p><p>$2350</p>
+            </div>   
         </div>
+       {{/each}}
 
-        <div class="offcanvas-footer">
-                <p>Subtotal:</p><p>$2350</p>
-                <p>Total:</p><p>$2350</p>
-        </div>   
         <button class="btn-offcanva">Ordenar</button>
-       
     </div>
 </header>
 
